@@ -1,0 +1,32 @@
+<div class="mat-elevation-z8">
+    <h1>Add New Product</h1>
+
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+            <mat-label>Name</mat-label>
+            <input *ngIf="!statusValue" matInput placeholder="Ex. iPhone" value="" [(ngModel)]="productName" name="productName" required>
+            <input *ngIf="statusValue" matInput placeholder="Ex. iPhone" value="" [(ngModel)]="productName" name="productName" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Description</mat-label>
+            <textarea *ngIf="!statusValue" matInput placeholder="Ex. It makes me feel..." value="" [(ngModel)]="productDesc" name="productDesc" required></textarea>
+            <textarea *ngIf="statusValue" matInput placeholder="Ex. It makes me feel..." value="" [(ngModel)]="productDesc" name="productDesc" required></textarea>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Price</mat-label>
+            <input type="number" *ngIf="!statusValue" matInput placeholder="Ex. 10000" value="" [(ngModel)]="productPrice" name="productPrice" required>
+            <input type="number" *ngIf="statusValue" matInput placeholder="Ex. 10000" value="" [(ngModel)]="productPrice" name="productPrice" required>
+
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Quantity</mat-label>
+            <input type="number" *ngIf="!statusValue" matInput placeholder="Ex. 10" value="" [(ngModel)]="productQuantity" name="productQuantity" required>
+            <input type="number" *ngIf="statusValue" matInput placeholder="Ex. 10" value="" [(ngModel)]="productQuantity" name="productQuantity" required>
+        </mat-form-field>
+
+        <button mat-raised-button class="addProduct" (click)="addProduct(productName)">Add Product</button>
+    </form>
+</div>

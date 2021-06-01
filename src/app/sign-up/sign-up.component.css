@@ -1,0 +1,14 @@
+mat-card {
+    margin: 0 auto;
+    width: 30%;
+    margin-top: 150px;
+}
+
+mat-form-field {
+    width: 400px;
+}
+
+button {
+    background-color: #1abc9c;
+    color: #fff;
+}

@@ -1,0 +1,9 @@
+mat-toolbar {
+    /* margin-bottom: 50px; */
+    background-color: #1abc9c;
+    color: #fff;
+}
+
+strong {
+    margin-right: 10px;
+}

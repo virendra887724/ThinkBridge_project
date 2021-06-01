@@ -1,0 +1,20 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <span><strong>{{title}}</strong></span>
+        <span class="example-fill-remaining-space"></span>
+        <span class="align-center"></span>
+        <span class="example-spacer"></span>
+        <button mat-button (click)="aboutClick()">About</button>
+        <button mat-button (click)="contactClick()">Contact</button>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+        <mat-icon>login</mat-icon>
+        <button mat-button (click)="loginPage()">Log Out</button>
+            </button>
+        </mat-menu>
+    </mat-toolbar-row>
+</mat-toolbar>
+<router-outlet></router-outlet>
